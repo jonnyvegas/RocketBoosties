@@ -591,59 +591,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1625824246
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8902305362784705133, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
-      propertyPath: m_Name
-      value: Rick's Weird Space Pod
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
 --- !u!1001 &1889504105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,6 +648,103 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
+--- !u!1001 &3142810900105280796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 66792600874872408, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 724768284930060750, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_Name
+      value: Rick's Weird Space Pod
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_Name
+      value: Thrust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a5fbd85d-683d-4407-b92e-0dc523ab19ae
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 0f19fa1a-daff-4e07-91e6-a31ee8507bc2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Gamepad>/rightTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Thrust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrust.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Thrust
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818863694878293170, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818863694878293170, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.51
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -708,7 +752,7 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1625824246}
+  - {fileID: 3142810900105280796}
   - {fileID: 1192269027}
   - {fileID: 267036831}
   - {fileID: 1889504105}
