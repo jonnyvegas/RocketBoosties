@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,14 +121,14 @@ MonoBehaviour:
     y: 624.8
     width: 1564
     height: 424.00006
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Rocket
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Rocket
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jonat\Documents\Projects\unity\RocketBoosties\RocketBoosties
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 53.99994}
-    m_SelectedIDs: 54a80000
-    m_LastClickedID: 43092
-    m_ExpandedIDs: 000000008ea5000074a70000d2a7000000ca9a3bffffff7f
+    m_SelectedIDs: 36a80000
+    m_LastClickedID: 43062
+    m_ExpandedIDs: 00000000a6a50000faa7000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008ea50000
+    m_ExpandedIDs: 00000000a6a50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d8c4ffff1cfbffff
+      m_SelectedIDs: 92a40000
+      m_LastClickedID: 42130
+      m_ExpandedIDs: 0cfbffff12fbffff1cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1168,9 +1168,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -3.957205, y: 2.3663454, z: -11.612882}
+    m_Target: {x: -9.618634, y: 1.7460829, z: -4.505807}
     speed: 2
-    m_Value: {x: -3.957205, y: 2.3663454, z: -11.612882}
+    m_Value: {x: -9.618634, y: 1.7460829, z: -4.505807}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1216,9 +1216,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15611438, y: -0.11381778, z: 0.018114164, w: -0.9810343}
+    m_Target: {x: -0.13696623, y: -0.018132437, z: 0.00250069, w: -0.9904822}
     speed: 2
-    m_Value: {x: -0.15610795, y: -0.11381309, z: 0.018113418, w: -0.9809938}
+    m_Value: {x: -0.13695598, y: -0.01813108, z: 0.0025005029, w: -0.99040806}
   m_Size:
     m_Target: 4.5149994
     speed: 2

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private InputAction thrust;
+    private Rigidbody theRigidbody;
     private void OnEnable()
     {
         thrust.Enable();   
@@ -11,15 +12,15 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        theRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (thrust.IsPressed())
+        if (thrust.IsPressed() && theRigidbody)
         {
-            Debug.Log("Something witty to the console");
+            theRigidbody.AddRelativeForce(new Vector3(0, 0.01f, 0));
         }
     }
 }
