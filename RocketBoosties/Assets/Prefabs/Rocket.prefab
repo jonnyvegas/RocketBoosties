@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c313d441b4db419fbc412f662ea55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust:
+  inputThrust:
     m_Name: Thrust
     m_Type: 0
     m_ExpectedControlType: 
@@ -56,23 +56,81 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: b8d3a8d2-bd31-4d0d-9c4e-9643a1866f74
-      m_Path: <Gamepad>/rightTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Thrust
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 2faba64c-d2b8-4c49-8b56-c8cdf55dc008
+      m_Id: a5fbd85d-683d-4407-b92e-0dc523ab19ae
       m_Path: <Keyboard>/space
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Thrust
       m_Flags: 0
+    - m_Name: 
+      m_Id: 0f19fa1a-daff-4e07-91e6-a31ee8507bc2
+      m_Path: <Gamepad>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thrust
+      m_Flags: 0
     m_Flags: 0
-  thrustForce: 1
+  inputRot:
+    m_Name: Input Rot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4ba3871b-0dfd-42d2-8bd5-987aa58e2552
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: f53897f5-5b33-42b5-abfa-3557ed8f942a
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 4
+    - m_Name: positive
+      m_Id: 1d932fc9-c0bd-48bb-9a61-77a95907db45
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 8
+    - m_Name: negative
+      m_Id: 3b8c5199-0d86-42ce-9b2a-5501233e5fa7
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 8
+    - m_Name: 1D Axis
+      m_Id: 25b740cf-66f6-4788-8f8c-4894aa35dd9f
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: f1ba403b-9dbe-47d1-9eb0-9507691c7eb0
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: b6d145f2-2470-4abb-b782-00b028d804f2
+      m_Path: <Gamepad>/leftStick/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rot
+      m_Flags: 8
+    m_Flags: 0
+  thrustForce: 10
+  rotationSpeed: 100
 --- !u!54 &8352880395814130869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,7 +139,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8361319148650016248}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.01
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

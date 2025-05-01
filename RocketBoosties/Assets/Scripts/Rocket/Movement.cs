@@ -47,10 +47,10 @@ public class Movement : MonoBehaviour
     void CheckForRotation()
     {
         _theRotation = this.gameObject.transform.rotation.eulerAngles;
-        _theRotation.z += -inputRot.ReadValue<float>() * rotationSpeed * Time.fixedDeltaTime;
+        _theRotation.z += inputRot.ReadValue<float>() * rotationSpeed;// * Time.fixedDeltaTime;
         //Debug.Log(theRotation.z + " is the rotation");
         this.gameObject.transform.rotation = Quaternion.Euler(Vector3.Lerp(
-            this.gameObject.transform.rotation.eulerAngles, _theRotation, 1));
+            this.gameObject.transform.rotation.eulerAngles, _theRotation, Time.fixedDeltaTime));
         //this.gameObject.transform.Rotate(_theRotation);
     }
     float GetThrustForce()
