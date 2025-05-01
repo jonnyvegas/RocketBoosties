@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2046.4
     height: 1104.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -343,9 +343,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 53.99994}
-    m_SelectedIDs: d0a70000
-    m_LastClickedID: 42960
-    m_ExpandedIDs: 00000000b0a50000a0a7000000ca9a3bffffff7f
+    m_SelectedIDs: 90ae0000
+    m_LastClickedID: 44688
+    m_ExpandedIDs: 00000000f6ab000058ae000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0a50000
+    m_ExpandedIDs: 00000000f6ab0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e4bdffff
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1cfbffff
+      m_SelectedIDs: 66b30000
+      m_LastClickedID: 45926
+      m_ExpandedIDs: 38d4ffff42d4ffff6eb30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1159,7 +1159,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
+  m_OverrideSceneCullingMask: 4611686018427387905
   m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
@@ -1168,9 +1168,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 12.163795, y: 3.7081518, z: 11.805797}
+    m_Target: {x: 1.0175192, y: 3.2827659, z: -2.9495509}
     speed: 2
-    m_Value: {x: 12.163795, y: 3.7081518, z: 11.805797}
+    m_Value: {x: 1.0175192, y: 3.2827659, z: -2.9495509}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1216,9 +1216,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.054800987, y: -0.915501, z: 0.1333027, w: -0.37598574}
+    m_Target: {x: 0.05650343, y: -0.40237603, z: 0.024984742, w: 0.9135532}
     speed: 2
-    m_Value: {x: -0.054793313, y: -0.9153728, z: 0.13328403, w: -0.37593308}
+    m_Value: {x: 0.056494877, y: -0.4023151, z: 0.02498096, w: 0.9134149}
   m_Size:
     m_Target: 2.4564044
     speed: 2
