@@ -149,11 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -175,9 +175,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 748203449}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
       insertIndex: -1
       addedObject: {fileID: 748203450}
@@ -445,33 +442,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
   m_PrefabInstance: {fileID: 267036831}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &748203449
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748203445}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
 --- !u!65 &748203450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -788,12 +758,28 @@ PrefabInstance:
       value: Rick's Weird Space Pod
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: thrustForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: rotationSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_Name
       value: Thrust
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_Name
+      value: Input Rot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_SingletonActionBindings.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Id
@@ -804,6 +790,18 @@ PrefabInstance:
       value: 0f19fa1a-daff-4e07-91e6-a31ee8507bc2
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[0].m_Id
+      value: f53897f5-5b33-42b5-abfa-3557ed8f942a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 1d932fc9-c0bd-48bb-9a61-77a95907db45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[2].m_Id
+      value: 3b8c5199-0d86-42ce-9b2a-5501233e5fa7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Keyboard>/space
       objectReference: {fileID: 0}
@@ -812,12 +810,76 @@ PrefabInstance:
       value: <Gamepad>/rightTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[0].m_Name
+      value: 1D Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[0].m_Path
+      value: 1DAxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[1].m_Name
+      value: negative
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/leftArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[2].m_Name
+      value: positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[2].m_Path
+      value: <Keyboard>/rightArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_SingletonActionBindings.Array.data[0].m_Action
       value: Thrust
       objectReference: {fileID: 0}
     - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: thrust.m_SingletonActionBindings.Array.data[1].m_Action
       value: Thrust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[0].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[1].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[2].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputThrust.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a5fbd85d-683d-4407-b92e-0dc523ab19ae
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputThrust.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 0f19fa1a-daff-4e07-91e6-a31ee8507bc2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Input Rot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Input Rot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputRot.m_SingletonActionBindings.Array.data[2].m_Action
+      value: Input Rot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputThrust.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512100191095487435, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: inputThrust.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Gamepad>/rightTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 8352880395814130869, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: m_Mass
@@ -837,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818863694878293170, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.393
+      value: 2.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
