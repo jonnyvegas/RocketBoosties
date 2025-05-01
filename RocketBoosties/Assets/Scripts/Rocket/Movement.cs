@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckForThrust();
         CheckForRotation();
@@ -40,15 +40,18 @@ public class Movement : MonoBehaviour
         if (inputThrust.IsPressed() && _theRigidbody)
         {
             
-            _theRigidbody.AddRelativeForce(this.gameObject.transform.up * (thrustForce * Time.deltaTime));
+            _theRigidbody.AddRelativeForce(this.gameObject.transform.up * (thrustForce * Time.fixedDeltaTime));
         }
     }
 
     void CheckForRotation()
     {
-        _theRotation.z = inputRot.ReadValue<float>() * Time.deltaTime * rotationSpeed;
+        _theRotation = this.gameObject.transform.rotation.eulerAngles;
+        _theRotation.z += -inputRot.ReadValue<float>() * rotationSpeed * Time.fixedDeltaTime;
         //Debug.Log(theRotation.z + " is the rotation");
-        this.gameObject.transform.Rotate(_theRotation);
+        this.gameObject.transform.rotation = Quaternion.Euler(Vector3.Lerp(
+            this.gameObject.transform.rotation.eulerAngles, _theRotation, 1));
+        //this.gameObject.transform.Rotate(_theRotation);
     }
     float GetThrustForce()
     {
