@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     private Vector3 _startingRotation;
     private Vector3 _targetRotation;
     private float _inputData = 0f;
+    private IRocketAudio _rocketAudioRef;
     private void OnEnable()
     {
         inputThrust.Enable();  
@@ -29,6 +30,18 @@ public class Movement : MonoBehaviour
     {
         _theRigidbody = GetComponent<Rigidbody>();
         _startingRotation = this.gameObject.transform.eulerAngles;
+        if (TryGetComponent(out IRocketAudio rocketAudio))
+        {
+            _rocketAudioRef = rocketAudio;
+            if (_rocketAudioRef != null)
+            {
+                Debug.Log("Found rocketAudio");
+            }
+            else
+            {
+                Debug.Log("Could not find rocketAudio");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -44,6 +57,11 @@ public class Movement : MonoBehaviour
         {
             
             _theRigidbody.AddRelativeForce(this.gameObject.transform.up * (thrustForce * Time.fixedDeltaTime));
+            _rocketAudioRef.PlayOrStopThrustSfx(true);
+        }
+        else
+        {
+            _rocketAudioRef.PlayOrStopThrustSfx(false);
         }
     }
 
