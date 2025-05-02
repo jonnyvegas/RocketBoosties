@@ -49,11 +49,11 @@ public class Movement : MonoBehaviour
 
     void CheckForRotation()
     {
-        _startingRotation = this.gameObject.transform.eulerAngles;
-        _targetRotation = _startingRotation;
         _inputData = inputRot.ReadValue<float>();
         if (_inputData != 0.0f)
         {
+            _startingRotation = this.gameObject.transform.eulerAngles;
+            _targetRotation = _startingRotation;
             _targetRotation.z += (_inputData * (rotationSpeed * Time.fixedDeltaTime));
        
             // Don't want to rotate while we're telling the rocket to rotate.
