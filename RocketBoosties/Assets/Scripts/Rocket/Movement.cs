@@ -12,10 +12,12 @@ public class Movement : MonoBehaviour
     [SerializeField] private float thrustForce = 1.0f;
     
     [SerializeField] private float rotationSpeed = 1.0f;
+    private float _lerpSpeed = 1.0f;
     
     // Used on Update().
     private Rigidbody _theRigidbody;
-    private Vector3 _theRotation;
+    private Vector3 _startingRotation;
+    private Vector3 _targetRotation;
     private void OnEnable()
     {
         inputThrust.Enable();  
@@ -25,7 +27,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         _theRigidbody = GetComponent<Rigidbody>();
-        _theRotation = Vector3.zero;
+        _startingRotation = this.gameObject.transform.eulerAngles;
     }
 
     // Update is called once per frame
@@ -46,12 +48,16 @@ public class Movement : MonoBehaviour
 
     void CheckForRotation()
     {
-        _theRotation = this.gameObject.transform.rotation.eulerAngles;
-        _theRotation.z += inputRot.ReadValue<float>() * rotationSpeed;// * Time.fixedDeltaTime;
-        //Debug.Log(theRotation.z + " is the rotation");
-        this.gameObject.transform.rotation = Quaternion.Euler(Vector3.Lerp(
-            this.gameObject.transform.rotation.eulerAngles, _theRotation, Time.fixedDeltaTime));
-        //this.gameObject.transform.Rotate(_theRotation);
+        _startingRotation = this.gameObject.transform.eulerAngles;
+        _targetRotation = _startingRotation;
+        _targetRotation.z += (inputRot.ReadValue<float>() * (rotationSpeed * Time.fixedDeltaTime));
+       
+        // Don't want to rotate while we're telling the rocket to rotate.
+        _theRigidbody.freezeRotation = true;
+        this.gameObject.transform.eulerAngles = Vector3.Lerp(_startingRotation, _targetRotation, _lerpSpeed);
+        _theRigidbody.freezeRotation = false;
+        
+        //this.gameObject.transform.Rotate(Vector3.forward * (inputRot.ReadValue<float>() * (rotationSpeed * Time.fixedDeltaTime)));
     }
     float GetThrustForce()
     {
