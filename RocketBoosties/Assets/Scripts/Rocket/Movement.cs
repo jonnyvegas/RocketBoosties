@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     private Rigidbody _theRigidbody;
     private Vector3 _startingRotation;
     private Vector3 _targetRotation;
+    private float _inputData = 0f;
     private void OnEnable()
     {
         inputThrust.Enable();  
@@ -50,12 +51,17 @@ public class Movement : MonoBehaviour
     {
         _startingRotation = this.gameObject.transform.eulerAngles;
         _targetRotation = _startingRotation;
-        _targetRotation.z += (inputRot.ReadValue<float>() * (rotationSpeed * Time.fixedDeltaTime));
+        _inputData = inputRot.ReadValue<float>();
+        if (_inputData != 0.0f)
+        {
+            _targetRotation.z += (_inputData * (rotationSpeed * Time.fixedDeltaTime));
        
-        // Don't want to rotate while we're telling the rocket to rotate.
-        _theRigidbody.freezeRotation = true;
-        this.gameObject.transform.eulerAngles = Vector3.Lerp(_startingRotation, _targetRotation, _lerpSpeed);
-        _theRigidbody.freezeRotation = false;
+            // Don't want to rotate while we're telling the rocket to rotate.
+            _theRigidbody.freezeRotation = true;
+            this.gameObject.transform.eulerAngles = Vector3.Lerp(_startingRotation, _targetRotation, _lerpSpeed);
+            _theRigidbody.freezeRotation = false;
+        }
+        
         
         //this.gameObject.transform.Rotate(Vector3.forward * (inputRot.ReadValue<float>() * (rotationSpeed * Time.fixedDeltaTime)));
     }
