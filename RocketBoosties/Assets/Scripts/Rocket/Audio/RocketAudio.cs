@@ -1,10 +1,4 @@
 using UnityEngine;
-
-public interface IRocketAudio
-{
-    public void PlayOrStopThrustSfx(bool bPlay);
-    public bool GetIsPlaying();
-}
 public class RocketAudio : MonoBehaviour, IRocketAudio
 {
     private AudioSource _thrustAudioSource;

@@ -1,8 +1,15 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] private GameObject sceneLoader;
+    public void Start()
+    {
+        //Debug.Log( GameObject.Find("SceneLoader").gameObject.name + " is the object");
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         switch (other.gameObject.tag)
@@ -25,6 +32,10 @@ public class CollisionHandler : MonoBehaviour
             default:
                 // Blow it up! - it is not in the list of things that don't blow us up.
                 Debug.Log("CollisionHandler - default! blow up!");
+                if (sceneLoader.TryGetComponent(out ISceneLoader loader))
+                {
+                    loader.LoadDefaultScene();
+                }
                 break;
         }
     }
