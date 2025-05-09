@@ -59,12 +59,23 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
 
     public void LoadScene(int sceneIdx)
     {
+        currentSceneIdx = sceneIdx;
         SceneManager.LoadScene(sceneIdx);
     }
 
     public int GetCurrentSceneIdx()
     {
         return currentSceneIdx;
+    }
+
+    public int GetNextSceneIdx()
+    {
+        if (currentSceneIdx + 1 < sceneArray.Length)
+        {
+            return currentSceneIdx + 1;
+        }
+
+        return 0;
     }
 
     public float GetSceneLoadDelay()

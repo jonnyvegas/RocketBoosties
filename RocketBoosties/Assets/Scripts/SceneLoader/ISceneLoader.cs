@@ -9,5 +9,7 @@ public interface ISceneLoader
     void LoadCurrentScene();
     IEnumerator LoadSceneAfterDelay(int sceneIdx, float delay);
     int GetCurrentSceneIdx();
+
+    int GetNextSceneIdx();
     float GetSceneLoadDelay();
 }
