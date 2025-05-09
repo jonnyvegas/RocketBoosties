@@ -13,17 +13,17 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     [SerializeField] private float thrustForce = 1.0f;
     
     [SerializeField] private float rotationSpeed = 1.0f;
+    [SerializeField] private float timeBeforeDisableMovement = 0f;
     private float _lerpSpeed = 1.0f;
     
-    // Used on Update().
+    // Used on Update() methods. Cached refs (i.e., not set in editor).
     private Rigidbody _theRigidbody;
     private Vector3 _startingRotation;
     private Vector3 _targetRotation;
     private float _inputData = 0f;
     private IRocketAudio _rocketAudioRef;
-    
     private IEnumerator _disableMovementCoroutine;
-    [SerializeField] private float timeBeforeDisableMovement = 0f;
+    
     private void OnEnable()
     {
         inputThrust.Enable();  

@@ -7,9 +7,9 @@ using UnityEngine.Serialization;
 public class SceneLoader : MonoBehaviour, ISceneLoader
 {
     [SerializeField] private SceneAsset[] sceneArray;
-    private int currentSceneIdx;
-    
     [SerializeField] private float sceneLoadDelay = 1.0f;
+    
+    private int currentSceneIdx;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

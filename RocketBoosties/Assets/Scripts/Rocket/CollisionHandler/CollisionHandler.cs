@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour, ICollisionHandler
 {
-    public GameObject sceneLoader;
-    private IEnumerator coroutine;
+    private GameObject _sceneLoader;
+    private IEnumerator _coroutine;
     public void Start()
     {
-        sceneLoader = GameObject.FindGameObjectWithTag("Scene");
+        _sceneLoader = GameObject.FindGameObjectWithTag("Scene");
  
         //
     }
 
     public void SetSceneLoaderRef(GameObject sceneLoader)
     {
-        this.sceneLoader = sceneLoader;
+        this._sceneLoader = sceneLoader;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -27,7 +27,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
                 // We finished the game! call something to finish. Not sure which gameObject but can
                 // keep reference in a script in rocket, perhaps?
                // Debug.Log("CollisionHandler - finished!");
-                if (sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
+                if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
                 {
                     sceneLoaderRef.LoadNextScene();
                 }
@@ -53,12 +53,12 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
     private void StartCrashSequence()
     {
         // Invoke the scene stuff so that we can have it load later.
-        if (sceneLoader.TryGetComponent(out ISceneLoader loader))
+        if (_sceneLoader.TryGetComponent(out ISceneLoader loader))
         {
-            coroutine = loader.LoadSceneAfterDelay(loader.GetCurrentSceneIdx(), loader.GetSceneLoadDelay());
+            _coroutine = loader.LoadSceneAfterDelay(loader.GetCurrentSceneIdx(), loader.GetSceneLoadDelay());
             // Don't forget to call StartCoroutine or the function is just waiting to be called. It won't
             // work until you start the coroutine KEKW
-            StartCoroutine(coroutine);
+            StartCoroutine(_coroutine);
             //loader.LoadCurrentScene();
         }
                 
