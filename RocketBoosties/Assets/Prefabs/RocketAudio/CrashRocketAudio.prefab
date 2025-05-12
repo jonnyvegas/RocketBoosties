@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4598152396141586506}
-  - component: {fileID: 2582637423357737708}
+  - component: {fileID: 6462396017866876640}
   m_Layer: 0
   m_Name: CrashRocketAudio
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2582637423357737708
+--- !u!114 &6462396017866876640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6971605812422580646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad2609af47b55244802c5e1bdf67fba, type: 3}
+  m_Script: {fileID: 11500000, guid: 068b8e86e9672e244961e02f1a718569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: c6c23b66b07037d459815d96820e6436, type: 3}

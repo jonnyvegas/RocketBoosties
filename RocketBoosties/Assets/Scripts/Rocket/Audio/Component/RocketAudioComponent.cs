@@ -1,17 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RocketAudioComponent : MonoBehaviour, IRocketAudio
 {
     [SerializeField] private AudioClip audioClip;
     private AudioSource _audioSource;
 
-    void Start()
+    protected virtual void Start()
     {
-        Debug.Log("Calling start");
+        //Debug.Log("Calling start");
         _audioSource = this.gameObject.AddComponent<AudioSource>();
         _audioSource.clip = audioClip;
-        Debug.Log("Setting audio source clip to " + audioClip.name);
+        //Debug.Log("Setting audio source clip to " + audioClip.name);
         _audioSource.loop = false;
     }
 

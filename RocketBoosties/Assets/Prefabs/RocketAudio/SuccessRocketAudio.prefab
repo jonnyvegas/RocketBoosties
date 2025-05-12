@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4598152396141586506}
-  - component: {fileID: 2582637423357737708}
+  - component: {fileID: 3626029650868658444}
   m_Layer: 0
   m_Name: SuccessRocketAudio
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2582637423357737708
+--- !u!114 &3626029650868658444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6971605812422580646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad2609af47b55244802c5e1bdf67fba, type: 3}
+  m_Script: {fileID: 11500000, guid: 03649989bc46a9140acbeb308cbc4f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 8a6d34d94e093914fbc0bf0c83acfdce, type: 3}
