@@ -902,6 +902,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5557290842722533441, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8361319148650016248, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -946,8 +950,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 8728484466874518172, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+    - {fileID: 3679926169121057522, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 231157270633495691, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d37e4da84a72124f9b6407e9a8f7a2a, type: 3}

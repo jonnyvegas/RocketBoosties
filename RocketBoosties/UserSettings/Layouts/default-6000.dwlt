@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1500.8
     height: 1104.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Rocket/Audio
+    - Assets/Prefabs/RocketAudio
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Rocket/Audio
+  - Assets/Prefabs/RocketAudio
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jonat\Documents\Projects\unity\RocketBoosties\RocketBoosties
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 02af0000
-    m_LastClickedID: 44802
-    m_ExpandedIDs: 0000000062ac0000c0ae0000c6ae000000af000000ca9a3bffffff7f
+    m_SelectedIDs: b4b10000
+    m_LastClickedID: 45492
+    m_ExpandedIDs: 0000000062ac0000c0ae0000c2ae0000c6ae0000feae000000af0000e8af000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -400,8 +400,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ecf9ffff
-    m_LastClickedInstanceID: -1556
+    m_SelectedInstanceIDs: dcf9ffff
+    m_LastClickedInstanceID: -1572
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 465affffecf9ffff06faffff
+      m_SelectedIDs: 96ddfeff
+      m_LastClickedID: -74346
+      m_ExpandedIDs: aae0feffcaf9ffffdcf9ffff06faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1168,9 +1168,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -2.5218213, y: 10.30545, z: -11.936461}
+    m_Target: {x: -10.070004, y: 3.46, z: -0.000069499016}
     speed: 2
-    m_Value: {x: -2.5218213, y: 10.30545, z: -11.936461}
+    m_Value: {x: -10.070004, y: 3.46, z: -0.000069499016}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1220,9 +1220,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.050987605, y: 0.011103632, z: -0.00041002926, w: 0.9986375}
   m_Size:
-    m_Target: 3.0575705
+    m_Target: 1.8496788
     speed: 2
-    m_Value: 3.0575705
+    m_Value: 1.8496788
   m_Ortho:
     m_Target: 0
     speed: 2

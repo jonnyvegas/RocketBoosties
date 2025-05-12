@@ -21,8 +21,9 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     private Vector3 _startingRotation;
     private Vector3 _targetRotation;
     private float _inputData = 0f;
-    private IRocketAudio _rocketAudioRef;
+    private IRocketAudioManager _rocketAudioRef;
     private IEnumerator _disableMovementCoroutine;
+    private bool _bDoPress = false;
     
     private void OnEnable()
     {
@@ -34,7 +35,7 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     {
         _theRigidbody = GetComponent<Rigidbody>();
         _startingRotation = this.gameObject.transform.eulerAngles;
-        if (TryGetComponent(out IRocketAudio rocketAudio))
+        if (TryGetComponent(out IRocketAudioManager rocketAudio))
         {
             _rocketAudioRef = rocketAudio;
             
@@ -54,10 +55,16 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
         {
             
             _theRigidbody.AddRelativeForce(this.gameObject.transform.up * (thrustForce * Time.fixedDeltaTime));
-            _rocketAudioRef.PlayOrStopThrustSfx(true);
+            if (!_bDoPress)
+            {
+                _bDoPress = true;
+                _rocketAudioRef.PlayOrStopThrustSfx(true);
+            }
+           
         }
         else
         {
+            _bDoPress = false;
             _rocketAudioRef.PlayOrStopThrustSfx(false);
         }
     }

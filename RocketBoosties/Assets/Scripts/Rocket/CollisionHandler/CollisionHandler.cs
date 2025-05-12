@@ -62,7 +62,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
                 
         DisableRocketMovement();
 
-        if (TryGetComponent(out IRocketAudio audio))
+        if (TryGetComponent(out IRocketAudioManager audio))
         {
             audio.PlayCrashSfx();
         }
@@ -79,7 +79,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
             //sceneLoaderRef.LoadNextScene();
         }
 
-        if (TryGetComponent(out IRocketAudio audio))
+        if (TryGetComponent(out IRocketAudioManager audio))
         {
             audio.PlaySuccessSfx();
         }
