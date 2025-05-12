@@ -32,7 +32,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
                         // We finished the game! call something to finish. Not sure which gameObject but can
                         // keep reference in a script in rocket, perhaps?
                         // Debug.Log("CollisionHandler - finished!");
-                        Success();
+                        Success(other.GetContact(0).point);
                         break;
                     case "Fuel":
                         // We might not need this, but in future may need fuel which is needed to continue flying.
@@ -47,7 +47,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
                     default:
                         // Blow it up! - it is not in the list of things that don't blow us up.
                         // Debug.Log("CollisionHandler - default! blow up!");
-                        StartCrashSequence();
+                        StartCrashSequence(other.GetContact(0).point);
                         break;
                 }
             }
@@ -55,7 +55,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
         
     }
 
-    private void StartCrashSequence()
+    private void StartCrashSequence(Vector3 location)
     {
         // Invoke the scene stuff so that we can have it load later.
         if (_sceneLoader.TryGetComponent(out ISceneLoader loader))
@@ -73,9 +73,14 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
         {
             audio.PlayCrashSfx();
         }
+
+        if (TryGetComponent(out IRocketParticleManager particleManager))
+        {
+            particleManager.SpawnExplosionAtLocation(location);
+        }
     }
 
-    private void Success()
+    private void Success(Vector3 hitLocation)
     {
         if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
         {
@@ -91,6 +96,10 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
             audio.PlaySuccessSfx();
         }
         DisableRocketMovement();
+        if (TryGetComponent(out IRocketParticleManager particleManager))
+        {
+            particleManager.SpawnSuccessParticlesAtLoc(hitLocation);
+        }
         
     }
 

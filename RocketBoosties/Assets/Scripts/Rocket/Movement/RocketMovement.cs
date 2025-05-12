@@ -25,6 +25,7 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     private IEnumerator _disableMovementCoroutine;
     private bool _bDoPress = false;
     private bool _bMovementEnabled = false;
+    private IRocketParticleManager _particleManager;
     
     private void OnEnable()
     {
@@ -36,7 +37,7 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
         inputThrust.Enable();  
         inputRot.Enable();
         _bMovementEnabled = true;
-        Debug.Log("Movement Enabled");
+        //Debug.Log("Movement Enabled");
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +48,11 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
         {
             _rocketAudioRef = rocketAudio;
             
+        }
+
+        if (TryGetComponent(out IRocketParticleManager particleManager))
+        {
+            _particleManager = particleManager;
         }
     }
 
@@ -67,6 +73,7 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
             {
                 _bDoPress = true;
                 _rocketAudioRef.PlayOrStopThrustSfx(true);
+                _particleManager.PlayOrStopThrustParticles(true);
             }
            
         }
@@ -74,6 +81,7 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
         {
             _bDoPress = false;
             _rocketAudioRef.PlayOrStopThrustSfx(false);
+            _particleManager.PlayOrStopThrustParticles(false);
         }
     }
 
