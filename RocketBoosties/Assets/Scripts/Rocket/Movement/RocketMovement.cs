@@ -24,11 +24,19 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     private IRocketAudioManager _rocketAudioRef;
     private IEnumerator _disableMovementCoroutine;
     private bool _bDoPress = false;
+    private bool _bMovementEnabled = false;
     
     private void OnEnable()
     {
+        EnableMovement();
+    }
+
+    private void EnableMovement()
+    {
         inputThrust.Enable();  
         inputRot.Enable();
+        _bMovementEnabled = true;
+        Debug.Log("Movement Enabled");
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -107,7 +115,13 @@ public class RocketMovement : MonoBehaviour, IRocketMovement
     private IEnumerator DisableMovement(float timeToWaitBeforeDisabling)
     {
         yield return new WaitForSeconds(timeToWaitBeforeDisabling);
+        _bMovementEnabled = false;
         inputThrust.Disable();
         inputRot.Disable();
+    }
+
+    public bool MovementEnabled()
+    {
+        return _bMovementEnabled;
     }
 }
