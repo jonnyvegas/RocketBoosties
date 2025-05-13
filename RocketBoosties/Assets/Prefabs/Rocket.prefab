@@ -45,10 +45,10 @@ GameObject:
   - component: {fileID: 8818863694878293170}
   - component: {fileID: 5512100191095487435}
   - component: {fileID: 8352880395814130869}
-  - component: {fileID: 8491393921574647710}
   - component: {fileID: 3479920429449433000}
   - component: {fileID: 5557290842722533441}
   - component: {fileID: 4910152131455714705}
+  - component: {fileID: 8509104926225218445}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Player
@@ -168,8 +168,8 @@ MonoBehaviour:
       m_Action: Input Rot
       m_Flags: 8
     m_Flags: 0
-  thrustForce: 10
-  rotationSpeed: 100
+  thrustForce: 650
+  rotationSpeed: 300
   timeBeforeDisableMovement: 0
 --- !u!54 &8352880395814130869
 Rigidbody:
@@ -179,8 +179,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8361319148650016248}
   serializedVersion: 4
-  m_Mass: 0.01
-  m_Drag: 1
+  m_Mass: 0.5
+  m_Drag: 0.01
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -198,27 +198,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 2
---- !u!65 &8491393921574647710
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8361319148650016248}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.6, y: 1.99, z: 1.39}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &3479920429449433000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96cc100577a631b45a40b1b6bcf8b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bEnableDebug: 0
 --- !u!114 &5557290842722533441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +241,27 @@ MonoBehaviour:
   explosionParticleGameObject: {fileID: 3391583204190125370}
   successParticleGameObject: {fileID: 5744741323247476554}
   thrustParticleGameObject: {fileID: 7275633884856169575}
+--- !u!65 &8509104926225218445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361319148650016248}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3849087, y: 1.87987, z: 1.3097878}
+  m_Center: {x: 0.0144433975, y: 0.93791956, z: 0.15489432}
 --- !u!1 &8570617186490902177
 GameObject:
   m_ObjectHideFlags: 0
