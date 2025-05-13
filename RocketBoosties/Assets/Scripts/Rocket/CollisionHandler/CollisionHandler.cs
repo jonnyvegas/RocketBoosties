@@ -2,17 +2,28 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CollisionHandler : MonoBehaviour, ICollisionHandler
 {
+    [SerializeField] private bool bEnableDebug = false;
     private GameObject _sceneLoader;
     private IEnumerator _crashCoroutine;
     private IEnumerator _successCoroutine;
+    private BoxCollider _collider;
     public void Start()
     {
         _sceneLoader = GameObject.FindGameObjectWithTag("Scene");
- 
+        _collider = GetComponent<BoxCollider>();
         //
+    }
+
+    void Update()
+    {
+        if (bEnableDebug)
+        {
+            RespondToDebugKeys();
+        }
     }
 
     public void SetSceneLoaderRef(GameObject sceneLoader)
@@ -82,15 +93,8 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
 
     private void Success(Vector3 hitLocation)
     {
-        if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
-        {
-            _successCoroutine = sceneLoaderRef.LoadSceneAfterDelay(
-                sceneLoaderRef.GetNextSceneIdx(),
-                sceneLoaderRef.GetSceneLoadDelay());
-            StartCoroutine(_successCoroutine);
-            //sceneLoaderRef.LoadNextScene();
-        }
 
+        LoadNextLevel();
         if (TryGetComponent(out IRocketAudioManager audio))
         {
             audio.PlaySuccessSfx();
@@ -108,6 +112,64 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
         if (TryGetComponent(out IRocketMovement movement))
         {
             movement.InvokeDisableMovement();
+        }
+    }
+
+    private void LoadNextLevel()
+    {
+        if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
+        {
+            _successCoroutine = sceneLoaderRef.LoadSceneAfterDelay(
+                sceneLoaderRef.GetNextSceneIdx(),
+                sceneLoaderRef.GetSceneLoadDelay());
+            StartCoroutine(_successCoroutine);
+            //sceneLoaderRef.LoadNextScene();
+        }
+    }
+
+    private void LoadNextLevelNoDelay()
+    {
+        if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
+        {
+            _successCoroutine = sceneLoaderRef.LoadSceneAfterDelay(
+                sceneLoaderRef.GetNextSceneIdx(),
+                0.1f);
+            StartCoroutine(_successCoroutine);
+            //sceneLoaderRef.LoadNextScene();
+        }
+    }
+
+    private void DisableCollision()
+    {
+        if (_collider)
+        {
+            _collider.enabled = false;
+        }
+    }
+
+    private void EnableCollision()
+    {
+        if (_collider)
+        {
+            _collider.enabled = true;
+        }
+    }
+    
+    private void RespondToDebugKeys()
+    {
+        if (Keyboard.current.lKey.isPressed)
+        {
+            LoadNextLevelNoDelay();
+        }
+
+        if (Keyboard.current.cKey.isPressed)
+        {
+            DisableCollision();
+        }
+
+        if (Keyboard.current.vKey.isPressed)
+        {
+            EnableCollision();
         }
     }
 }
