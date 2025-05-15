@@ -131,8 +131,7 @@ public class CollisionHandler : MonoBehaviour, ICollisionHandler
     {
         if (_sceneLoader.TryGetComponent(out ISceneLoader sceneLoaderRef))
         {
-            _successCoroutine = sceneLoaderRef.LoadSceneAfterDelay(
-                sceneLoaderRef.GetNextSceneIdx(),
+            _successCoroutine = sceneLoaderRef.LoadNextSceneAfterDelay(
                 0.1f);
             StartCoroutine(_successCoroutine);
             //sceneLoaderRef.LoadNextScene();

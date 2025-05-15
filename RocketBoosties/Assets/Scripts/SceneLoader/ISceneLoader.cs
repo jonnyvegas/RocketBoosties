@@ -8,6 +8,7 @@ public interface ISceneLoader
     void LoadNextScene();
     void LoadCurrentScene();
     IEnumerator LoadSceneAfterDelay(int sceneIdx, float delay);
+    IEnumerator LoadNextSceneAfterDelay(float delay);
     int GetCurrentSceneIdx();
 
     int GetNextSceneIdx();

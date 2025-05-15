@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class SceneLoader : MonoBehaviour, ISceneLoader
 {
     [SerializeField] private SceneAsset[] sceneArray;
+    [SerializeField] private SceneAsset endScene;
     [SerializeField] private float sceneLoadDelay = 1.0f;
     
     private int currentSceneIdx;
@@ -38,6 +39,8 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
         if (currentSceneIdx >= sceneArray.Length)
         {
             currentSceneIdx = 0;
+            LoadEndScene();
+            return;
             //Debug.Log("resetting index to 0");
         }
         LoadCurrentScene();
@@ -55,6 +58,12 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
         //Debug.Log("ready to load scene after delay");
         LoadScene(sceneIdx);
         
+    }
+
+    public IEnumerator LoadNextSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        LoadNextScene();
     }
 
     public void LoadScene(int sceneIdx)
@@ -81,5 +90,23 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
     public float GetSceneLoadDelay()
     {
         return sceneLoadDelay;
+    }
+
+    private void LoadEndScene()
+    {
+        if (endScene)
+        {
+            SceneManager.LoadScene(endScene.name);
+        }
+    }
+
+    public void EndGame()
+    {
+#if UNITY_STANDALONE
+        Application.Quit();
+#endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
