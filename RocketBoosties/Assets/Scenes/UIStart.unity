@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: endScene
       value: 
       objectReference: {fileID: 102900000, guid: a1595fd01842767449952b15a4a2de84, type: 3}
+    - target: {fileID: -3596612733487590554, guid: ab0046a8f7965264e89e7ead75d7329b, type: 3}
+      propertyPath: sceneArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4004461458164694340, guid: ab0046a8f7965264e89e7ead75d7329b, type: 3}
       propertyPath: m_Name
       value: SceneLoadObject

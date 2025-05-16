@@ -1,27 +1,42 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class SceneLoader : MonoBehaviour, ISceneLoader
 {
-    [SerializeField] private SceneAsset[] sceneArray;
-    [SerializeField] private SceneAsset endScene;
+    [SerializeField] private Scene[] sceneArray;
+    [SerializeField] private Scene endScene;
     [SerializeField] private float sceneLoadDelay = 1.0f;
     
     private int currentSceneIdx;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentSceneIdx = 0;
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
+        sceneArray = new Scene[sceneCount];
+        for (int i = 0; i < sceneCount; i++)
+        {
+            sceneArray[i] = SceneManager.GetSceneByBuildIndex(i);
+        }
+        currentSceneIdx = 1;
         DontDestroyOnLoad(this.gameObject);
         
     }
 
+    void Update()
+    {
+        if (Keyboard.current.escapeKey.isPressed)
+        {
+            EndGame();
+        }
+    }
+
     public void LoadDefaultScene()
     {
-        currentSceneIdx = 0;
+        currentSceneIdx = 1;
         LoadScene(currentSceneIdx);
         
     }
@@ -36,9 +51,9 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
         //Debug.Log("current index" + currentSceneIdx);
         currentSceneIdx++;
         //Debug.Log("current index after increment " + currentSceneIdx);
-        if (currentSceneIdx >= sceneArray.Length)
+        if (currentSceneIdx >= sceneArray.Length - 1)
         {
-            currentSceneIdx = 0;
+            currentSceneIdx = 1;
             LoadEndScene();
             return;
             //Debug.Log("resetting index to 0");
@@ -79,12 +94,12 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
 
     public int GetNextSceneIdx()
     {
-        if (currentSceneIdx + 1 < sceneArray.Length)
+        if (currentSceneIdx + 1 < sceneArray.Length - 1)
         {
             return currentSceneIdx + 1;
         }
 
-        return 0;
+        return 1;
     }
 
     public float GetSceneLoadDelay()
@@ -94,10 +109,9 @@ public class SceneLoader : MonoBehaviour, ISceneLoader
 
     private void LoadEndScene()
     {
-        if (endScene)
-        {
-            SceneManager.LoadScene(endScene.name);
-        }
+        
+        SceneManager.LoadScene(sceneArray.Length - 1);
+        
     }
 
     public void EndGame()

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/UIStart.unity
+    guid: d6777cebed5d2ac40bf69cf4c79fbbaa
+  - enabled: 1
     path: Assets/Scenes/Over.unity
     guid: e4c3dabf76b25e0449112d048cc90991
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Through.unity
     guid: e90e2adc24fd1f84aaaaa32ae3e443ca
-  - enabled: 1
-    path: Assets/Scenes/UIStart.unity
-    guid: d6777cebed5d2ac40bf69cf4c79fbbaa
   - enabled: 1
     path: Assets/Scenes/UIEnd.unity
     guid: a1595fd01842767449952b15a4a2de84
